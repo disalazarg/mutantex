@@ -1,4 +1,8 @@
 defmodule Mutantex.Fib do
+  @moduledoc """
+  Calculates the nth Fibonacci number, using memoization through an in-memory state
+  """
+
   use GenServer
 
   def init(_args), do: {:ok, %{"0" => 1, "1" => 1}}

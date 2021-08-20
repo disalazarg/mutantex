@@ -7,7 +7,8 @@ defmodule Mutantex.MixProject do
       version: "0.1.0",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      preferred_cli_env: [coveralls: :test, "coveralls.html": :test, "exavier.test": :test]
     ]
   end
 
@@ -22,7 +23,10 @@ defmodule Mutantex.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:exavier, "~> 0.3.0"}
+      {:credo, "~> 1.5.6"},
+      {:exavier, "~> 0.3.0"},
+      {:excoveralls, "~> 0.14.2"},
+      {:propcheck, "~> 1.4", only: [:test, :dev]}
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]

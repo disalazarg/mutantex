@@ -10,7 +10,7 @@ defmodule Mutantex.Application do
     children = [
       # Starts a worker by calling: Mutantex.Worker.start_link(arg)
       # {Mutantex.Worker, arg}
-      { Mutantex.Fib, %{} }
+      {Mutantex.Fib, %{}}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
