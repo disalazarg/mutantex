@@ -24,6 +24,7 @@ defmodule Mutantex.MixProject do
   defp deps do
     [
       {:credo, "~> 1.5.6"},
+      {:dialyxir, "~> 1.1.0"},
       {:exavier, "~> 0.3.0"},
       {:excoveralls, "~> 0.14.2"},
       {:propcheck, "~> 1.4", only: [:test, :dev]}

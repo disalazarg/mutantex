@@ -5,7 +5,7 @@ defmodule Mutantex.Fib do
 
   use GenServer
 
-  def init(_args), do: {:ok, %{"0" => 1, "1" => 1}}
+  def init(_args), do: {:ok, %{"0" => 0, "1" => 1}}
 
   def start_link(state) do
     GenServer.start_link(__MODULE__, state, name: __MODULE__)
